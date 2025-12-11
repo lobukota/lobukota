@@ -304,7 +304,57 @@ footer {
     padding: 2rem 0;
     margin-top: 2rem;
 }
+/* Styling Utama Footer */
+footer {
+    background-color: #2c3e50; /* Warna biru gelap / abu-abu tua */
+    color: #ffffff;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 4px solid #3498db; /* Garis aksen biru di atas footer */
+}
 
+.footer-content p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+/* --- UPDATE BAGIAN FOOTER KKT --- */
+
+/* 1. Mendefinisikan Animasi "Glow" (Bersinar) */
+@keyframes kktGlowEffect {
+    0%, 100% {
+        /* Keadaan normal: warna emas standar, bayangan (glow) redup */
+        color: #f1c40f; 
+        text-shadow: 0 0 4px rgba(241, 196, 15, 0.3);
+        transform: scale(1); /* Ukuran normal */
+    }
+    50% {
+        /* Keadaan tengah animasi: warna sedikit lebih terang, glow lebih kuat, sedikit membesar */
+        color: #ffeb99; /* Emas yang lebih muda/terang */
+        text-shadow: 0 0 15px rgba(241, 196, 15, 0.8), 0 0 25px rgba(241, 196, 15, 0.4);
+        transform: scale(1.02); /* Membesar 2% saja agar halus */
+    }
+}
+
+/* Styling Container KKT */
+.kkt-signature {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 2. Menerapkan Style dan Animasi ke Teks KKT */
+.kkt-signature p {
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Menambah sedikit jarak antar huruf */
+    display: inline-block; /* Diperlukan agar transform: scale berfungsi mulus */
+    
+    /* Menerapkan animasi yang dibuat di atas */
+    /* Nama animasi | Durasi | Tipe perulangan | Kecepatan */
+    animation: kktGlowEffect 3s infinite ease-in-out;
+}
 /* Responsive Mobile */
 @media (max-width: 768px) {
     .menu-toggle {
